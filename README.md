@@ -1,13 +1,14 @@
 Use this image as a test case for securing Docker image hosts.
 
-The root password has been removed: 
-```
-su - root
-```
-
-Or just run:
+First, you can directly run:
 ```
 /usr/bin/rootshell -p
 ```
 
-(Which is a copy of bash).
+This is just a copy of bash, which apparently requires an undocumented `-p` option:
+http://unix.stackexchange.com/questions/74527/setuid-bit-seems-to-have-no-effect-on-bash
+
+Or, the root password has been removed and you can use the traditional `su`:
+```
+su - root
+```
